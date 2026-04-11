@@ -1,4 +1,8 @@
-const API = "http://127.0.0.1:10000";
+import os
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
 
 // 🌌 Particles
 tsParticles.load("particles-js", {
