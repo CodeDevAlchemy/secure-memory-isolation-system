@@ -55,14 +55,14 @@ def access(req, target):
 @app.route('/logs')
 def logs():
     try:
-        log_path = os.path.join(os.path.dirname(__file__), "../logs/security_log.txt")
-        
+        log_path = os.path.join(os.path.dirname(__file__), "logs", "security_log.txt")
+
         if not os.path.exists(log_path):
             return "No logs found yet"
 
         with open(log_path, "r") as f:
             content = f.readlines()
-            
+
         if not content:
             return "No logs recorded yet"
 
