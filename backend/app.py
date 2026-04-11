@@ -1,6 +1,5 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
-CORS(app)
 import os
 
 from memory_manager import allocate_memory, get_memory
