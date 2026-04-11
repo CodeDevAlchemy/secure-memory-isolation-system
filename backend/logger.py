@@ -1,5 +1,7 @@
-from datetime import datetime
+import os
+
+LOG_FILE = os.path.join(os.path.dirname(__file__), "security_log.txt")
 
 def log_attack(message):
-    with open("../logs/security_log.txt", "a") as f:
-        f.write(f"[{datetime.now()}] {message}\n")
+    with open(LOG_FILE, "a") as file:
+        file.write(message + "\n")
